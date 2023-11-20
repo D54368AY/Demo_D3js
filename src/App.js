@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {Box} from '@mui/material';
+import LeftDrawer from './views/Sidebar/LeftDrawer';
+import NavBar from './views/Navbar/NavBar';
+import Dashboard from './views/Dashboard/Dashboard';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <LeftDrawer />
+      <NavBar />
+      <Box sx={{ml:'220px'}}>
+      <Dashboard />
+      </Box>
+      </Box>
   );
 }
 
